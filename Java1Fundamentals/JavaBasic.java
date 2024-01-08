@@ -1,3 +1,4 @@
+// 1. compile java (javac & java)
 class JavaBasic{
     public static void main(String[] args){
         System.out.println("Hello World");
@@ -10,10 +11,10 @@ class JavaBasic{
         * DO NOT USE snake_case 
         */
         String developer = "Heidi";
-        int totalFiles = 2;
-        boolean isDone = false;
-        double requiredTime = 1.5;
-        char difficulty = 'B';
+        int totalFiles = 2; // Integer
+        boolean isDone = false; // Boolean
+        double requiredTime = 1.5; // Double
+        char difficulty = 'B'; // Character
         System.out.println(projectTitle + developer + totalFiles + isDone + requiredTime + difficulty);
         // Wrapper class: allow null
 
