@@ -1,13 +1,15 @@
+package com.heidichen.inheritancedemo;
+
 import java.util.ArrayList;
 
-class Developer{
+public class Developer {
     // 1. private attributes /properties /  member variables
     private String name;
     private int wpm;
     private ArrayList<String> languages;
     private double salary;
     private int braincell;
-
+    
     // 2. constructor 
     public Developer(){
         this.name = "Anonymous";
@@ -29,52 +31,48 @@ class Developer{
         this.braincell = 10;
     }
 
-    // 3. getters/setters
-    // getter : with return, no parameters
-    public String getName(){
-        return this.name;
-    }
+	public String getName() {
+		return name;
+	}
 
-    // setters : no return, with parameters
-    public void setName(String name){
-        this.name = name;
-        // this.name : name of the instance (name of that dev created)
-        // name : closest name variable -- the one in parameters
-    }
+	public void setName(String name) {
+		this.name = name;
+	}
 
-    public int getWpm(){
-        return this.wpm;
-    }
+	public int getWpm() {
+		return wpm;
+	}
 
-    public void setWpm(int wpm){
-        this.wpm = wpm;
-    }
+	public void setWpm(int wpm) {
+		this.wpm = wpm;
+	}
 
-    public ArrayList<String> getLanguages(){
-        return this.languages;
-    }
+	public ArrayList<String> getLanguages() {
+		return languages;
+	}
 
-    public void setLanguages(ArrayList<String> languages){
-        this.languages = languages;
-    }
+	public void setLanguages(ArrayList<String> languages) {
+		this.languages = languages;
+	}
 
-    public double getSalary(){
-        return this.salary;
-    }
+	
+	public double getSalary() {
+		return salary;
+	}
 
-    public void setSalary(double salary){
-        this.salary = salary;
-    }
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
 
-    public int getBraincell(){
-        return this.braincell;
-    }
+	public int getBraincell() {
+		return braincell;
+	}
 
-    public void setBraincell(int braincell){
-        this.braincell = braincell;
-    }
-
-    // 4. other methods
+	public void setBraincell(int braincell) {
+		this.braincell = braincell;
+	}
+	
+	// 4. other methods
     public void display(){
         System.out.println("==== Developer Display ======");
         System.out.println("Name: "+ this.name);
@@ -95,4 +93,6 @@ class Developer{
         this.braincell+= 2;
         return this;        
     }
+    
+    
 }

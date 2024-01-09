@@ -8,6 +8,10 @@ class Developer{
     private double salary;
     private int braincell;
 
+    // total dev it instantiated
+    private static int devCount; // default: 0
+    private static double totalSalary;// default: 0.0
+
     // 2. constructor 
     public Developer(){
         this.name = "Anonymous";
@@ -16,6 +20,8 @@ class Developer{
         this.languages.add("Java");
         this.salary = 150000;
         this.braincell = 8;
+        devCount++;
+        totalSalary += this.salary;
     }
 
     public Developer(String name){
@@ -27,6 +33,8 @@ class Developer{
         this.languages.add("Python");
         this.salary = 120000;
         this.braincell = 10;
+        devCount++;
+        totalSalary += this.salary;
     }
 
     // 3. getters/setters
@@ -63,6 +71,8 @@ class Developer{
     }
 
     public void setSalary(double salary){
+        totalSalary -= this.salary;
+        totalSalary += salary;
         this.salary = salary;
     }
 
@@ -72,6 +82,22 @@ class Developer{
 
     public void setBraincell(int braincell){
         this.braincell = braincell;
+    }
+
+    public static int getDevCount(){
+        return devCount;
+    }
+
+    public static void setDevCount(int devCountInParam){
+        devCount = devCountInParam;
+    }
+
+    public static double getTotalSalary(){
+        return totalSalary;
+    }
+
+    public static void setTotalSalary(double totalSalaryInParam){
+        totalSalary = totalSalaryInParam;
     }
 
     // 4. other methods
